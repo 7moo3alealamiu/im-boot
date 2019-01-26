@@ -62,6 +62,19 @@ m.delete();
 message.reply("`تم حذف جميع الرتب بنجاح`")
 }
 });
+client.on("message", message => {
+ 
+            if (message.content.startsWith(prefix + "bcb")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' ');
+  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {//حقوق دايموند كودز
+ m.send(`${argresult}\n ${m}`);
+})
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`);
+ message.delete();
+};    
+});
 client.on('message' , message => {
  
     if (message.content === "^inv") {
@@ -91,7 +104,6 @@ const embed = new Discord.RichEmbed()
 **يعمل 24 ساعه بدون توقف الا في حالة صيانه**
 ** وسرعة البوت سريعه جدا  KillerGamez علي خادم**
 **البوت فيه اكواد حمايه من اي تهكير**
-**يعني سيرفر هيكونو في امان**
    [❖═══════ اوامر اداريه ═══════❖]
 :arrow_right: ** ^uchat ~ ل فك تقفيل الشات**
 :arrow_right: ** ^cchat ~ ل تقفيل الشات**
@@ -105,6 +117,7 @@ const embed = new Discord.RichEmbed()
 :arrow_right: ** ^warn ~ ل اعطاء تحذير لاحد **   
 :arrow_right: ** ^send ~ ل عمل تصويت ب روم محدد**
 :arrow_right: ** ^bc ~ ل ارسال رساله لاعضاء السيرفر**
+:arrow_right: ** ^bcb ~ ل ارسال رسالة لكل للكل غير مطور**
    [❖═══════ اوامر عامه ═══════❖]
 :arrow_right: ** ^time ~ لعرض لك توقيت مصر والامارت **
 :arrow_right: ** ^image ~ لعرض لك صورة السيرفر **
