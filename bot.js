@@ -87,7 +87,6 @@ const embed = new Discord.RichEmbed()
 :arrow_right: ** ^send ~ ل عمل تصويت ب روم محدد**
 :arrow_right: ** ^bc ~ ل ارسال رساله لاعضاء السيرفر**
    [❖═══════ اوامر ادارية اخري═══════❖]
-:arrow_right: ** ^active ~ Active ل تفعيل نفسك في سيرفر عليك صنع رول باسم** 
    [❖═══════ اوامر عامه ═══════❖]
 :arrow_right: ** ^time ~ لعرض لك توقيت مصر والامارت **
 :arrow_right: ** ^image ~ لعرض لك صورة السيرفر **
@@ -1613,13 +1612,7 @@ const Sra7a = [
    message.react("??")
  }
 });
-client.on('message', async message => {
-          if(message.content.startsWith(prefix + "active")) {
-              if(!message.channel.guild) return message.reply message.channel.send("** هذا الامر للسيرفرات فقط ⛔ ** ");
-            message.member.addRole(message.guild.roles.find("name". "Active"));
-            message.author.send("** تم تفعيلك استمتع 🙂 **")
-          }
-        });
+
 if(command === "top") {
       const top10 = sql.prepare("SELECT * FROM scores WHERE guild = ? ORDER BY points DESC LIMIT 10;").all(message.guild.id);
       const embed = new Discord.RichEmbed()
