@@ -129,6 +129,7 @@ const embed = new Discord.RichEmbed()
 :arrow_right: ** ^skin ~ يعرض لك اسكنك في ماين كرفت **
 :arrow_right: ** ^server ~ يعرض لك معلومات عن السيرفر **
 :arrow_right: ** ^bot ~ يعرض لك معلومات عن البوت **
+:arrow_right: ** ^top inv ~ يعرض لك كثر شخص بالدعوات **
 `)
  message.author.sendEmbed(embed)
  
@@ -1675,6 +1676,29 @@ const pubg = [
    message.channel.sendEmbed(client);
    message.react("??")
  }
+});
+client.on('message',message =>{
+    if(message.content ==  "^top inv"){
+message.guild.fetchInvites().then(i =>{
+var invites = [];
+
+i.forEach(inv =>{
+    var [invs,i]=[{},null];
+    
+    if(inv.maxUses){
+        invs[inv.code] =+ inv.uses+"/"+inv.maxUses;
+    }else{
+        invs[inv.code] =+ inv.uses;
+    }
+invites.push(`  لقد دعوت  :- (${inv.inviter}) =  (${invs[inv.code]}) \;`);
+
+invites.push( `رابط الانفايت حق  :point_up::skin-tone-1::  ${inv.url} \;`);
+});
+  message.channel.send(invites.join(`\n`)+'\n\n**By @everyone:** '+message.author);
+  
+});
+
+    }
 });
  
 
