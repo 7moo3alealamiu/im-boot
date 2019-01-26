@@ -1651,7 +1651,7 @@ client.channels.find('id', '538526200990138378').setName("Welcome To KIL");
 client.channels.find('id', '538526200990138378').setName("Welcome To KILL");
 client.channels.find('id', '538526200990138378').setName("Welcome To KILLE");
 client.channels.find('id', '538526200990138378').setName("Welcome To KILLER");
-client.channels.find('id', '538526200990138378').setName("Welcome To KILLERS ℘);
+client.channels.find('id', '538526200990138378').setName("Welcome To KILLERS ℘");
   }, 4000);
 });
 
