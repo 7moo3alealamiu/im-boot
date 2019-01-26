@@ -105,7 +105,6 @@ const embed = new Discord.RichEmbed()
 :arrow_right: ** ^warn ~ ل اعطاء تحذير لاحد **   
 :arrow_right: ** ^send ~ ل عمل تصويت ب روم محدد**
 :arrow_right: ** ^bc ~ ل ارسال رساله لاعضاء السيرفر**
-   [❖═══════ اوامر ادارية اخري═══════❖]
    [❖═══════ اوامر عامه ═══════❖]
 :arrow_right: ** ^time ~ لعرض لك توقيت مصر والامارت **
 :arrow_right: ** ^image ~ لعرض لك صورة السيرفر **
@@ -1632,6 +1631,28 @@ const Sra7a = [
    message.channel.sendEmbed(client);
    message.react("??")
  }
+});
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '538526200990138378').setName("W");
+client.channels.find('id', '538526200990138378').setName("We");
+client.channels.find('id', '538526200990138378').setName("Wel");
+client.channels.find('id', '538526200990138378').setName("Welc");
+client.channels.find('id', '538526200990138378').setName("Welco");
+client.channels.find('id', '538526200990138378').setName("Welcom");
+client.channels.find('id', '538526200990138378').setName("Welcome");
+client.channels.find('id', '538526200990138378').setName("Welcome T");
+client.channels.find('id', '538526200990138378').setName("Welcome To");
+client.channels.find('id', '538526200990138378').setName("Welcome To LI");
+client.channels.find('id', '538526200990138378').setName("Welcome To GHT");
+client.channels.find('id', '538526200990138378').setName("Welcome To KILLER");
+client.channels.find('id', '538526200990138378').setName("Welcome To KILLER CO");
+client.channels.find('id', '538526200990138378').setName("Welcome To KILLER MM");
+client.channels.find('id', '538526200990138378').setName("Welcome To KILLER U");
+client.channels.find('id', '538526200990138378').setName("Welcome To KILLER N");
+client.channels.find('id', '538526200990138378').setName("Welcome To KILLER TY");
+client.channels.find('id', '538526200990138378').setName("Welcome To KILLER  ℘");
+  }, 4000);
 });
 
 
