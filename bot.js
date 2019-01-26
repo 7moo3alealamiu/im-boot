@@ -64,7 +64,7 @@ message.reply("`تم حذف جميع الرتب بنجاح`")
 });
 client.on("message", message => {
  
-            if (message.content.startsWith(prefix + "bcb")) {
+            if (message.content.startsWith(prefix + "nbc")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -117,7 +117,7 @@ const embed = new Discord.RichEmbed()
 :arrow_right: ** ^warn ~ ل اعطاء تحذير لاحد **   
 :arrow_right: ** ^send ~ ل عمل تصويت ب روم محدد**
 :arrow_right: ** ^bc ~ ل ارسال رساله لاعضاء السيرفر**
-:arrow_right: ** ^bcb ~ ل ارسال رسالة لكل للكل غير مطور**
+:arrow_right: ** ^nbc ~ ل ارسال رسالة لكل للكل غير مطور**
    [❖═══════ اوامر عامه ═══════❖]
 :arrow_right: ** ^time ~ لعرض لك توقيت مصر والامارت **
 :arrow_right: ** ^image ~ لعرض لك صورة السيرفر **
@@ -1456,6 +1456,7 @@ const embed = new Discord.RichEmbed()
 :arrow_right: ** ^3omre ~  يتوقع عمرك قد اي **
 :arrow_right: ** ^kill ~  لقتل احد **   
 :arrow_right: ** ^sra7a ~  يسالك سالة وانتا ترد بصراحة**
+:arrow_right: ** ^fortnite ~  اسئلة لعبة فورت نايت **
 [❖═══════ اوامر اخري═══════❖]
 :arrow_right: ** ^inv ~ لارسال رابط دعوه البوت **
 :arrow_right: ** ^suppport ~ لارسال رابط سيرفر خادم بوت **
@@ -1645,29 +1646,36 @@ const Sra7a = [
    message.react("??")
  }
 });
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '538526200990138378').setName("W");
-client.channels.find('id', '538526200990138378').setName("We");
-client.channels.find('id', '538526200990138378').setName("Wel");
-client.channels.find('id', '538526200990138378').setName("Welc");
-client.channels.find('id', '538526200990138378').setName("Welco");
-client.channels.find('id', '538526200990138378').setName("Welcom");
-client.channels.find('id', '538526200990138378').setName("Welcome");
-client.channels.find('id', '538526200990138378').setName("Welcome");
-client.channels.find('id', '538526200990138378').setName("Welcome ");
-client.channels.find('id', '538526200990138378').setName("Welcome T");
-client.channels.find('id', '538526200990138378').setName("Welcome To ");
-client.channels.find('id', '538526200990138378').setName("Welcome To K");
-client.channels.find('id', '538526200990138378').setName("Welcome To KI");
-client.channels.find('id', '538526200990138378').setName("Welcome To KIL");
-client.channels.find('id', '538526200990138378').setName("Welcome To KILL");
-client.channels.find('id', '538526200990138378').setName("Welcome To KILLE");
-client.channels.find('id', '538526200990138378').setName("Welcome To KILLER");
-client.channels.find('id', '538526200990138378').setName("Welcome To KILLERS ℘");
-  }, 4000);
+const pubg = [
+     'Fortnite | ما هو اقوي سلاح برائيك ؟',
+     'Fortnite | ما هي افضل منطقة تنزل بها برايك ؟',
+     'Fortnite | كم عدد فوزاتك ؟',
+     'Fortnite | كم هو عدد اكثر قتلات لك ؟ ',
+     'Fortnite | كم عدد اصدقائك ؟ ',
+     'Fortnite | كم عدد سكناتك ؟ ',
+     'Fortnite | من هو افضل لاعب اجنبي حسب رايك ؟ ',
+     'Fortnite | من هو افضل لاعب عربي حسب رايك ؟ ',
+     'Fortnite | ما هو افضل طور حسب رايك ؟ ',
+     'Fortnite | هل انت محترف ام نوب ؟ ',
+     'Fortnite | ما هما افضل سلاحين مع بعض حسب رايك ؟ ',
+ 
+ 
+]
+   client.on('message', message => {
+       if (message.author.bot) return;
+ if (message.content.startsWith('^fortnite')) {
+     if(!message.channel.guild) return message.reply('** This command only for servers **');
+  var client= new Discord.RichEmbed()
+  .setTitle("لعبه اسئله فورت نايت")
+  .setColor('#FFA500')
+  .setDescription(`${pubg[Math.floor(Math.random() * pubg.length)]}`)
+  .setImage("https://cdn.discordapp.com/attachments/497081825492074496/500662255004942346/images.jpg")
+                  .setTimestamp()
+ 
+   message.channel.sendEmbed(client);
+   message.react("??")
+ }
 });
-
  
 
 client.login(process.env.BOT_TOKEN);
