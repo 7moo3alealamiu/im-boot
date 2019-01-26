@@ -1442,6 +1442,8 @@ const embed = new Discord.RichEmbed()
 :arrow_right: ** ^hchannel ~ ل اخفاء جميع رومات السيرفر **
 :arrow_right: ** ^schannel ~ ل اظهار جميع رومات السيرفر **
 :arrow_right: ** ^move ~ ل صحب شخص الي روم الانتا في  **
+:arrow_right: ** ^dac ~ ل حذف جميع رومات السيرفر  **
+:arrow_right: ** ^dar ~ ل حذف جميع رتب السيرفر  **
 [❖═══════ اوامر اخري═══════❖]
 :arrow_right: ** ^inv ~ لارسال رابط دعوه البوت **
 :arrow_right: ** ^suppport ~ لارسال رابط سيرفر خادم بوت **
@@ -1631,6 +1633,7 @@ const Sra7a = [
    message.react("??")
  }
 });
+
 
 
 
