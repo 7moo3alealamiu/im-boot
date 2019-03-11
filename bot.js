@@ -102,7 +102,7 @@ const embed = new Discord.RichEmbed()
     .setDescription(`
    [❖════ مميزات البوت :robot: ═══❖]
 **يعمل 24 ساعه بدون توقف الا في حالة صيانه**
-** وسرعة البوت سريعه جدا  KillerGamez علي خادم**
+** وسرعة البوت سريعه جدا  BLITZ HOST🌹💸 علي خادم**
 **البوت فيه اكواد حمايه من اي تهكير**
    [❖═══════ اوامر اداريه ═══════❖]
 :arrow_right: ** ^uchat ~ ل فك تقفيل الشات**
@@ -651,7 +651,7 @@ client.on('message', message => {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "KilleŕGámèź•SyStem ℘";
+    let copy = "BLITZ HOST🌹💸";
     let request = `Requested By ${message.author.username}`;
     if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
     msg.react('✅')
@@ -1140,7 +1140,7 @@ client.on('message', message => {
 });
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","KiLLerGamez 🎮"));
+    member.addRole(member.guild.roles.find("name"," BLITZ HOST🌹💸"));
     });
 
 client.on("message", message => {
@@ -1158,7 +1158,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "KilleŕGámèź•SyStem ℘"
+          text: "BLITZ HOST🌹💸"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1473,7 +1473,7 @@ const embed = new Discord.RichEmbed()
  }
  });
  client.on("guildMemberAdd", function(member) {
-  const channel = member.guild.channels.find("name", "℘「chat")
+  const channel = member.guild.channels.find("name", "chat")
       const embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setAuthor(member.user.tag, member.user.avatarURL)
@@ -1496,7 +1496,7 @@ client.on('guildMemberRemove', Sal => { //By Salto7#4595
   .addField(' ?? الان ',`**[ ${Sal.guild.memberCount} ]**`,true)
   .setColor('RED')
   .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-  var channel =Sal.guild.channels.find('name', '℘「chat') // هنا حط اسم الروم الي تبيه يكتب فيه
+  var channel =Sal.guild.channels.find('name', 'chat') // هنا حط اسم الروم الي تبيه يكتب فيه
   if (!channel) return;
   channel.send({embed : embed});
   });
@@ -1556,7 +1556,7 @@ let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription('mailbox_with_mail تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("KilleŕGámèź•SyStem ℘")
+     .setFooter("BLITZ HOST🌹💸")
                                                 
 
 message.channel.send(embed);
