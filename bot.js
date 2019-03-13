@@ -34,7 +34,7 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-  client.user.setGame(`BLITZ HOST 💔🌷V6`,'https://www.twitch.tv/v5bz');
+  client.user.setGame(`BLITZ HOST 💔🌷`,'https://www.twitch.tv/v5bz');
   console.log('---------------');
   console.log(' Bot Is Online')
   console.log('---------------')
