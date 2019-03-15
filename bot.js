@@ -708,7 +708,7 @@ client.on('guildMemberRemove', Sal => { //By Salto7#4595
   .addField(' ?? الان ',`**[ ${Sal.guild.memberCount} ]**`,true)
   .setColor('RED')
   .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-  var channel =Sal.guild.channels.find('name', 'welcome❤') // هنا حط اسم الروم الي تبيه يكتب فيه
+  var channel =Sal.guild.channels.find('name', '『chat』') // هنا حط اسم الروم الي تبيه يكتب فيه
   if (!channel) return;
   channel.send({embed : embed});
   });
@@ -876,7 +876,7 @@ client.on("message", message => {
       if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحدد')
       if (!args[1]) return msg.reply('``اكتب السبب``')
       //غير اسم الروم او سوي روم بذا الاسم
-      if (msg.guild.channels.find('name', 'warns')) {
+      if (msg.guild.channels.find('name', '『warns』')) {
         //اذا غيرت فوق غير هنا كمان
         msg.guild.channels.find('name', 'warns').send(`
       تم اعطائك تنبيه : ${msg.mentions.members.first()}
@@ -1119,7 +1119,7 @@ client.on('message', message => {
     });
 
     client.on("guildMemberAdd", function(member) {
-  const channel = member.guild.channels.find("name", "welcome❤")
+  const channel = member.guild.channels.find("name", "『chat』")
       const embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setAuthor(member.user.tag, member.user.avatarURL)
