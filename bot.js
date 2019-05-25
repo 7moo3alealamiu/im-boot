@@ -34,7 +34,7 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-  client.user.setGame(`!~[Command§|^help]~!`,'https://www.twitch.tv/v5bz');
+  client.user.setGame(`🔥ŭℓṱĨᶆấṱẹ⚡ĜấᶆẹṜ 👑`,'https://www.twitch.tv/v5bz');
   console.log('---------------');
   console.log(' Bot Is Online')
   console.log('---------------')
@@ -102,9 +102,9 @@ const embed = new Discord.RichEmbed()
     .setDescription(`
    [❖════ مميزات البوت :robot: ═══❖]
 **يعمل 24 ساعه بدون توقف الا في حالة صيانه**
-** وسرعة البوت سريعه جدا  BLITZ HOST🌹💸 علي خادم**
+** وسرعة البوت سريعه جدا  🔥ŭℓṱĨᶆấṱẹ⚡ĜấᶆẹṜ 👑 علي خادم**
 **البوت فيه اكواد حمايه من اي تهكير**
-   [❖═══════ اوامر اداريه ═══════❖]
+   [❖═══════ -set- اداريه ═══════❖]
 :arrow_right: ** ^uchat ~ ل فك تقفيل الشات**
 :arrow_right: ** ^cchat ~ ل تقفيل الشات**
 :arrow_right: ** ^umute ~ ل فك الميوت الكتابي**
@@ -651,7 +651,7 @@ client.on('message', message => {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "BLITZ HOST🌹💸";
+    let copy = "🔥ŭℓṱĨᶆấṱẹ⚡ĜấᶆẹṜ 👑";
     let request = `Requested By ${message.author.username}`;
     if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
     msg.react('✅')
@@ -708,7 +708,7 @@ client.on('guildMemberRemove', Sal => { //By Salto7#4595
   .addField(' ?? الان ',`**[ ${Sal.guild.memberCount} ]**`,true)
   .setColor('RED')
   .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-  var channel =Sal.guild.channels.find('name', '『chat』') // هنا حط اسم الروم الي تبيه يكتب فيه
+  var channel =Sal.guild.channels.find('ḉḩɑ̈̈т̈̈-🤩', '₩ẹŀc̃̾ǿм̃̾ẹ-🤩') // هنا حط اسم الروم الي تبيه يكتب فيه
   if (!channel) return;
   channel.send({embed : embed});
   });
@@ -827,7 +827,7 @@ client.on('typingStart', (ch, user) => {
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
 .setDescription("معلومات عن الحــساب")
-               .setFooter(`BLITZ HOST🌹💸`, '')
+               .setFooter(`🔥ŭℓṱĨᶆấṱẹ⚡ĜấᶆẹṜ 👑`, '')
   .setColor("#9B59B6")
   .addField("اســـم الحســاب", `${message.author.username}`)
   .addField('كود الحساب الخاص', message.author.discriminator)
@@ -842,7 +842,7 @@ client.on('typingStart', (ch, user) => {
 
 client.on('message', msg => {
   if (msg.content === '^suppport') {
-    msg.reply('السيرفر للمساعده,https://discord.gg/NwX2bJF');
+    msg.reply('السيرفر للمساعده,https://discord.gg/cCCAE3X');
   }
 });
 
@@ -876,7 +876,7 @@ client.on("message", message => {
       if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحدد')
       if (!args[1]) return msg.reply('``اكتب السبب``')
       //غير اسم الروم او سوي روم بذا الاسم
-      if (msg.guild.channels.find('name', '『warns』')) {
+      if (msg.guild.channels.find('name', '₩₳Ṝи̃̾₷ 🤨')) {
         //اذا غيرت فوق غير هنا كمان
         msg.guild.channels.find('name', 'warns').send(`
       تم اعطائك تنبيه : ${msg.mentions.members.first()}
@@ -1119,7 +1119,7 @@ client.on('message', message => {
     });
 
     client.on("guildMemberAdd", function(member) {
-  const channel = member.guild.channels.find("name", "『chat』")
+  const channel = member.guild.channels.find("₩ẹŀc̃̾ǿм̃̾ẹ-🤩", "ḉḩɑ̈̈т̈̈-🤩")
       const embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setAuthor(member.user.tag, member.user.avatarURL)
@@ -1140,7 +1140,7 @@ client.on('message', message => {
 });
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name"," BLITZ HOST🌹💸"));
+    member.addRole(member.guild.roles.find("name","🎧Members🎮"));
     });
 
 client.on("message", message => {
@@ -1158,7 +1158,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "BLITZ HOST🌹💸"
+          text: "🔥ŭℓṱĨᶆấṱẹ⚡ĜấᶆẹṜ 👑"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1529,7 +1529,7 @@ let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription('mailbox_with_mail تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("BLITZ HOST🌹💸")
+     .setFooter("🔥ŭℓṱĨᶆấṱẹ⚡ĜấᶆẹṜ 👑")
                                                 
 
 message.channel.send(embed);
