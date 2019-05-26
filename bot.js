@@ -708,7 +708,7 @@ client.on('guildMemberRemove', Sal => { //By Salto7#4595
   .addField(' ?? الان ',`**[ ${Sal.guild.memberCount} ]**`,true)
   .setColor('RED')
   .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-  var channel =Sal.guild.channels.find('ḉḩɑ̈̈т̈̈ 🤩', '₩ẹŀc̃̾ǿм̃̾ẹ 🤩') // هنا حط اسم الروم الي تبيه يكتب فيه
+  var channel =Sal.guild.channels.find('welcome', '₩ẹŀc̃̾ǿм̃̾ẹ🤩') // هنا حط اسم الروم الي تبيه يكتب فيه
   if (!channel) return;
   channel.send({embed : embed});
   });
@@ -876,7 +876,7 @@ client.on("message", message => {
       if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحدد')
       if (!args[1]) return msg.reply('``اكتب السبب``')
       //غير اسم الروم او سوي روم بذا الاسم
-      if (msg.guild.channels.find('name', '₩₳Ṝи̃̾₷ 🤨')) {
+      if (msg.guild.channels.find('name', '₩₳Ṝи̃̾₷🤨')) {
         //اذا غيرت فوق غير هنا كمان
         msg.guild.channels.find('name', 'warns').send(`
       تم اعطائك تنبيه : ${msg.mentions.members.first()}
@@ -1119,7 +1119,7 @@ client.on('message', message => {
     });
 
     client.on("guildMemberAdd", function(member) {
-  const channel = member.guild.channels.find("₩ẹŀc̃̾ǿм̃̾ẹ 🤩", "ḉḩɑ̈̈т̈̈ 🤩")
+  const channel = member.guild.channels.find("welcome", "ḉḩɑ̈̈т̈̈🤩")
       const embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setAuthor(member.user.tag, member.user.avatarURL)
@@ -1673,6 +1673,41 @@ invites.push( `رابط الانفايت حق  :point_up::skin-tone-1::  ${inv.u
 
     }
 });
- 
+
+
+client.on('guildMemberAdd', member => {
+
+    var embed = new Discord.RichEmbed()
+
+    .setAuthor(member.user.username, member.user.avatarURL)
+
+    .setThumbnail(member.user.avatarURL)
+
+    .setImage('http://live-timely-4jepdssgmc.time.ly/wp-content/uploads/2018/08/welcomeEvents.jpg') //هنا حط الصوره الي تبيها
+
+    .setTitle('عضو جديد!')
+
+    .setDescription('مرحبا بك بالسيرفر')
+
+    .addField('``ايدي العضو``:',"" +  member.user.id, true)
+
+    .addField('``تاق العضو``', member.user.discriminator, true)
+
+    .addField('``تم الانشاء في``', member.user.createdAt, true)
+
+    .addField(' 👤  انت رقم',`**[ ${member.guild.memberCount} ]**`,true)
+
+    .setColor('RANDOM')
+
+    .setFooter(member.guild.name, member.guild.iconURL, true)
+
+    var channel =member.guild.channels.find('₩ẹŀc̃̾ǿм̃̾ẹ🤩', 'welcome') // هنا حط اسم الروم الي تبيه يكتب فيه
+
+    if (!channel) return;
+
+    channel.send({embed : embed});
+
+    });
+
 
 client.login(process.env.BOT_TOKEN);
