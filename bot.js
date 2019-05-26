@@ -708,7 +708,7 @@ client.on('guildMemberRemove', Sal => { //By Salto7#4595
   .addField(' ?? الان ',`**[ ${Sal.guild.memberCount} ]**`,true)
   .setColor('RED')
   .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-  var channel =Sal.guild.channels.find('welcome', '₩ẹŀc̃̾ǿм̃̾ẹ🤩') // هنا حط اسم الروم الي تبيه يكتب فيه
+  var channel =Sal.guild.channels.find('welcome', 'welcome-💓') // هنا حط اسم الروم الي تبيه يكتب فيه
   if (!channel) return;
   channel.send({embed : embed});
   });
@@ -1119,7 +1119,7 @@ client.on('message', message => {
     });
 
     client.on("guildMemberAdd", function(member) {
-  const channel = member.guild.channels.find("welcome", "ḉḩɑ̈̈т̈̈🤩")
+  const channel = member.guild.channels.find("welcoe", "chat-🤩")
       const embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setAuthor(member.user.tag, member.user.avatarURL)
@@ -1701,7 +1701,7 @@ client.on('guildMemberAdd', member => {
 
     .setFooter(member.guild.name, member.guild.iconURL, true)
 
-    var channel =member.guild.channels.find('₩ẹŀc̃̾ǿм̃̾ẹ🤩', 'welcome') // هنا حط اسم الروم الي تبيه يكتب فيه
+    var channel =member.guild.channels.find('welcome ', 'welcome-💓') // هنا حط اسم الروم الي تبيه يكتب فيه
 
     if (!channel) return;
 
