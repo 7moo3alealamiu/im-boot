@@ -1119,7 +1119,7 @@ client.on('message', message => {
     });
 
     client.on("guildMemberAdd", function(member) {
-  const channel = member.guild.channels.find("welcoe", "chat-🤩")
+  const channel = member.guild.channels.find("welcoe", "chat")
       const embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setAuthor(member.user.tag, member.user.avatarURL)
